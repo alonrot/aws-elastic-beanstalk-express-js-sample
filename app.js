@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chatbot', (req, res) => {
-  const pythonProcess = spawn('python', ['chatbot_script.py']);
+  const pythonProcess = spawn('python', [`${__dirname}/chatbot_script.py`]);
 
   pythonProcess.stdout.on('data', (data) => {
     res.send(data.toString());
