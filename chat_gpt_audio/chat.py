@@ -92,7 +92,8 @@ class ChatAgent:
                 # self._hmi.error()
                 raise RuntimeError("OpenAI API service is down.")
 
-            self._chat_dir = pathlib.Path(ROOT+"/chat_gpt_audio/messages") / datetime.now().strftime(
+            # self._chat_dir = pathlib.Path(ROOT+"/chat_gpt_audio/messages") / datetime.now().strftime(
+            self._chat_dir = pathlib.Path("chat_gpt_audio/messages") / datetime.now().strftime(
                 "%Y-%m-%d_%H-%M-%S"
             )
             self._chat_dir.mkdir(parents=True)
@@ -204,8 +205,10 @@ class ChatAgent:
         self, response_text: str, voice: Literal["alloy", "fable", "jared"] = "jared"
     ) -> None:
         # mp3_path = self._chat_dir / f"{len(self._audio_files)}_gpt.mp3"
-        mp3_path = ROOT+"/chat_gpt_audio/mama/merged_audio.mp3"
-        mp3_path_save = ROOT+"/chat_gpt_audio/mama/merged_audio_response.mp3"
+        # mp3_path = ROOT+"/chat_gpt_audio/mama/merged_audio.mp3"
+        # mp3_path_save = ROOT+"/chat_gpt_audio/mama/merged_audio_response.mp3"
+        mp3_path = "chat_gpt_audio/mama/merged_audio.mp3"
+        mp3_path_save = "chat_gpt_audio/mama/merged_audio_response.mp3"
 
         # response_text = "Hola, os envío recuerdos desde aquí, desde los Estados Unidos. Y nada, un besooo, adióooos."
         data = {
