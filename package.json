@@ -12,6 +12,12 @@
   },
   "license": "MIT-0",
   "dependencies": {
-    "express": "^4.17.3"
-  }
+    "express": "^4.19.2"
+  },
+  "bugs": {
+    "url": "https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample/issues"
+  },
+  "homepage": "https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample#readme",
+  "keywords": [],
+  "author": ""
 }

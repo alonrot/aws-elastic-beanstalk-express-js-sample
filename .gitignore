@@ -172,3 +172,10 @@ tags
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,visualstudiocode,vim
+
+*.mp3
+*.opus
+*.m4a
+*.mp4
+
+!chat_gpt_audio/mama/merged*.mp3
