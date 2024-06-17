@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/chatbot', (req, res) => {
+app.get('/', (req, res) => {
   // const pythonProcess = spawn('python', [`${__dirname}/chatbot_script.py`]);
   const pythonProcess = spawn('python', [`${__dirname}/chat_gpt_audio/test_chat.py`]);
 
