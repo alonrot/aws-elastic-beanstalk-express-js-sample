@@ -31,7 +31,7 @@ from audio import AudioPlayer, AudioRecorder
 GLASS_SOUND = "python_modules/manipulation/assets/sounds/glass.wav"
 VOICE_CLONE_URL = "https://api.openai.com/v1/audio/synthesize"
 VOICE_CLONE_HEADERS = {
-    "Authorization": "Bearer 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"
+    "Authorization": "Bearer sk-proj-FW1HvpkuoqsuuVnvm7FTT3BlbkFJOsOE2kux5mP5nkW89jRy" # mine
 }
 
 ROOT = "/Users/alonrot/artistic/hablaconmigo/aws-elastic-beanstalk-express-js-sample"

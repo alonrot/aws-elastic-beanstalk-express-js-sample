@@ -11,11 +11,9 @@ import requests
 from openai import OpenAI
 from audio import AudioPlayer
 
-GLASS_SOUND = "python_modules/manipulation/assets/sounds/glass.wav"
 VOICE_CLONE_URL = "https://api.openai.com/v1/audio/synthesize"
 VOICE_CLONE_HEADERS = {
-    # "Authorization": "Bearer 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" # Figure AI
-    "Authorization": "Bearer sk-proj-earxH8UQPGreMKyDyAcrT3BlbkFJvCFjejhpHYumPrZidspp" # Figure AI
+    "Authorization": "Bearer sk-proj-FW1HvpkuoqsuuVnvm7FTT3BlbkFJOsOE2kux5mP5nkW89jRy" # mine
 }
 
 logger = logging.getLogger(__name__)
@@ -25,9 +23,7 @@ from chat import ChatAgent
 
 if __name__ == "__main__":
 
-    # openai_api_key = "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" # Figure AI
-
-    openai_api_key = "sk-proj-earxH8UQPGreMKyDyAcrT3BlbkFJvCFjejhpHYumPrZidspp" # Mine
+    openai_api_key = "sk-proj-FW1HvpkuoqsuuVnvm7FTT3BlbkFJOsOE2kux5mP5nkW89jRy" # Mine
 
     audio = AudioPlayer(device='MacBook Pro Speakers')
     chat_agent = ChatAgent(audio=audio, openai_api_key=openai_api_key)
