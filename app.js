@@ -6,11 +6,10 @@ const { spawn } = require('child_process');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  // res.sendFile(__dirname + '/public/index.html');
-  res.sendFile(`${__dirname}/public/index.html`);
+  res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/', (req, res) => {
+app.get('/chatbot', (req, res) => {
   // const pythonProcess = spawn('python', [`${__dirname}/chatbot_script.py`]);
   const pythonProcess = spawn('python', [`${__dirname}/chat_gpt_audio/test_chat.py`]);
 
