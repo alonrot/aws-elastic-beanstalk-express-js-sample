@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -46,6 +46,59 @@
 
     startMicrophone();
     getChatbotResponse();
+  </script>
+</body>
+</html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot App</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #output {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="output">Waiting for chatbot response...</div>
+  <button onclick="getChatbotResponse();startMicrophone()">Get Response</button>
+  <script>
+    async function startMicrophone() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        console.log('Microphone access granted');
+        // You can process the audio stream here, or send it to your backend for further processing
+      } catch (err) {
+        console.error('Microphone access denied', err);
+      }
+    }
+    async function getChatbotResponse() {
+      try {
+        const response = await fetch('/chatbot');
+        const text = await response.text();
+        document.getElementById('output').innerText = text;
+      } catch (err) {
+        console.error('Failed to fetch chatbot response', err);
+      }
+    }
+    // startMicrophone();
+    // getChatbotResponse();
   </script>
 </body>
 </html>
