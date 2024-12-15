@@ -179,3 +179,4 @@ tags
 *.mp4
 
 !chat_gpt_audio/mama/merged*.mp3
+my_api
